@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>This is a task</h1>
+    <h1>This is a new project</h1>
   </div>
 </template>
 
