@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default store = new Vuex.Store({
   state: {
 
-  }
+  },
   mutations: {
     // See: https://www.mikestreety.co.uk/blog/vue-js-using-localstorage-with-the-vuex-store
     initStore(state) {
