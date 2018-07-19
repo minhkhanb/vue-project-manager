@@ -1,30 +1,28 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import projects from './modules/projects'
 
 Vue.use(Vuex)
 
-export default store = new Vuex.Store({
-  state: {
-
-  },
+const store = new Vuex.Store({
   mutations: {
-    // See: https://www.mikestreety.co.uk/blog/vue-js-using-localstorage-with-the-vuex-store
     initStore(state) {
       if (localStorage.getItem('store')) {
-        this.replaceState(
-          Object.assign(state, JSON.parse(localStorage.getItem('store')))
-        )
+        const cache = JSON.parse(localStorage.getItem('store'))
+
+        if (cache.projects) {
+          state.projects = cache.projects
+        }
       }
     }
   },
-  actions: {
-
-  },
-  getters: {
-
+  modules: {
+    projects
   }
 })
 
 store.subscribe((mutation, state) => {
   localStorage.setItem('store', JSON.stringify(state))
 })
+
+export default store

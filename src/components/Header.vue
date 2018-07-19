@@ -6,6 +6,8 @@
         <router-link :to="{ name: 'projects' }" tag="li" activeClass="active"><a>Projects</a></router-link>
       </ul>
     </div>
+    <router-link :to="{ name: 'projects' }" activeClass="active">Projects</router-link>
+    <router-link :to="{ name: 'project-new' }" activeClass="active">New Project</router-link>
   </nav>
 </template>
 
